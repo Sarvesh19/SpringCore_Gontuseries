@@ -13,7 +13,7 @@ public class TestSpringProject {
 
 		Restaruant restaruantObj = (Restaruant) context.getBean("restaruantBean");
 
-		restaruantObj.prepareHotDrink();
+		restaruantObj.displayWaiterNames();
 	}
 
 

@@ -4,7 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="restaruantBean" class="com.gontuserises.springcore.Restaruant">
-		<constructor-arg ref="teaBean"/>
+		<property name="restaruantWaiterList">
+			<list>
+				<value>Mr. ABC</value>
+				<value>Mr. BCD</value>
+				<value>Mr. DEF</value>
+				<value>Mr. FGH</value>
+				<value>Mr. GHI</value>
+			</list>
+		</property>
 	</bean>
 
 	<bean id="teaBean" class="com.gontuserises.springcore.Tea"/>

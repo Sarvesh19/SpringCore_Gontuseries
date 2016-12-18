@@ -1,18 +1,19 @@
 package com.gontuserises.springcore;
 
-import org.apache.regexp.RE;
+
+import java.util.List;
 
 /**
  * Created by KV on 18/12/2016.
  */
 public class Restaruant {
-	IHotDrink hotDrink;
+	private List restaruantWaiterList;
 
-	public Restaruant(IHotDrink hotDrink) {
-		this.hotDrink = hotDrink;
+	public void setRestaruantWaiterList(List restaruantWaiterList) {
+		this.restaruantWaiterList = restaruantWaiterList;
 	}
 
-	public void prepareHotDrink(){
-		hotDrink.prepareHotDrink();
+	public void displayWaiterNames(){
+		System.out.println("All waiter working in Restaruant: " + restaruantWaiterList);
 	}
 }
