@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="restaruantBean" class="com.gontuserises.springcore.Restaruant">
-
+		<constructor-arg ref="teaBean"/>
 	</bean>
+
+	<bean id="teaBean" class="com.gontuserises.springcore.Tea"/>
 </beans>
