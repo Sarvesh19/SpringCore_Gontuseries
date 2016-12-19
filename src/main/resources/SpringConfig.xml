@@ -3,8 +3,13 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="restaruantBean"
-	      class="com.gontuserises.springcore.Restaruant"/>
+	<bean id="restaruantBean" class="com.gontuserises.springcore.Restaruant">
+		<property name="wellcomeNote" value="${wellcomeNote}"/>
+	</bean>
 
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="classpath:spring.properties"/>
+	</bean>
 
 </beans>
