@@ -1,17 +1,19 @@
 package com.gontuserises.springcore;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Restaruant {
+public class Restaruant implements InitializingBean, DisposableBean {
 
 	public void greetCustomer(){
 		System.out.println("Wellcome dear customer!! This is the LifeCycle demo");
 	}
 
-	public void init(){
-		System.out.println("Restaruant Bean is going through init");
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Restaruant Bean is going through afterPropertiesSet");
 	}
 
-	public void destroy(){
-		System.out.println("Bean will destroy now");
+	public void destroy() throws Exception {
+		System.out.println("Restaruant Bean is destroying now");
 	}
 }
