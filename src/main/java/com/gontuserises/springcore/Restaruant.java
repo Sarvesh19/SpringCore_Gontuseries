@@ -1,19 +1,15 @@
 package com.gontuserises.springcore;
 
 
-import java.util.List;
-
-/**
- * Created by KV on 18/12/2016.
- */
 public class Restaruant {
-	private List restaruantWaiterList;
 
-	public void setRestaruantWaiterList(List restaruantWaiterList) {
-		this.restaruantWaiterList = restaruantWaiterList;
+	public String wellcomeNote;
+
+	public void setWellcomeNote(String wellcomeNote) {
+		this.wellcomeNote = wellcomeNote;
 	}
 
-	public void displayWaiterNames(){
-		System.out.println("All waiter working in Restaruant: " + restaruantWaiterList);
+	public void greetCustomer(){
+		System.out.println(wellcomeNote);
 	}
 }

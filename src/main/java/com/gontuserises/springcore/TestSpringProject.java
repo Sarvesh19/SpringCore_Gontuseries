@@ -12,8 +12,11 @@ public class TestSpringProject {
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 
 		Restaruant restaruantObj = (Restaruant) context.getBean("restaruantBean");
+		restaruantObj.setWellcomeNote("Object is setting wellcomeNote property");
+		restaruantObj.greetCustomer();
 
-		restaruantObj.displayWaiterNames();
+		Restaruant restaruantObj2 = (Restaruant) context.getBean("restaruantBean");
+		restaruantObj2.greetCustomer();
 	}
 
 

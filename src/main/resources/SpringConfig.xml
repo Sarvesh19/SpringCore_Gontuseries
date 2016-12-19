@@ -3,16 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="restaruantBean" class="com.gontuserises.springcore.Restaruant">
-		<property name="restaruantWaiterList">
-			<list>
-				<value>Mr. ABC</value>
-				<value>Mr. BCD</value>
-				<value>Mr. DEF</value>
-				<value>Mr. FGH</value>
-				<value>Mr. GHI</value>
-			</list>
-		</property>
+	<bean id="restaruantBean" class="com.gontuserises.springcore.Restaruant" scope="singleton" lazy-init="true">
+
 	</bean>
 
 	<bean id="teaBean" class="com.gontuserises.springcore.Tea"/>
