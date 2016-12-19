@@ -3,13 +3,15 @@ package com.gontuserises.springcore;
 
 public class Restaruant {
 
-	public String wellcomeNote;
-
-	public void setWellcomeNote(String wellcomeNote) {
-		this.wellcomeNote = wellcomeNote;
+	public void greetCustomer(){
+		System.out.println("Wellcome dear customer!! This is the LifeCycle demo");
 	}
 
-	public void greetCustomer(){
-		System.out.println(wellcomeNote);
+	public void init(){
+		System.out.println("Restaruant Bean is going through init");
+	}
+
+	public void destroy(){
+		System.out.println("Bean will destroy now");
 	}
 }
