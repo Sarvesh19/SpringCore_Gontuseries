@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="restaurantBean" class="org.sarindy.Tu01.Restaurant">
+		<property name="welcomeMessage"
+			value="This is welcome Note Message from the configuration file." />
+		<!-- name="welcomeMessage" is the Property in the class Restaurant -->
+	</bean>
+
+	<bean id="constructorBean" class="org.sarindy.constructorWay.Restaurant">
+		<constructor-arg ref="coffeeBean" />
+		<!-- We need to change the ref here to inject the diferrent class like Tea or coffee -->
+	</bean>
+
+	<bean id="teaBean" class="org.sarindy.constructorWay.Tea"></bean>
+
+	<bean id="coffeeBean" class="org.sarindy.constructorWay.Coffee"></bean>
+
+
+
+
+
+</beans>
+
+
